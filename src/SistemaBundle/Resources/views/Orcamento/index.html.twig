@@ -1,0 +1,206 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+        <div class="col-md-12">
+    <h2>Orçamento</h2>
+
+    
+    
+        <div class="form-group">
+          <div class="row">
+            <div class="col-xs-7"></div>
+            <div class="col-xs-2">
+              <input type="text" class="form-control" placeholder="Orçamento">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-xs-3">
+              <input type="text" class="form-control" placeholder="Vendedor">
+            </div>
+            <div class="col-xs-3">
+              <input type="text" class="form-control" placeholder="Email Vendendor">
+            </div>
+            <div class="col-xs-3">
+              <input type="text" class="form-control" placeholder="Email Cliente">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-xs-6">
+              <label for="item">Item: </label>
+              <input type="text" class="form-control"id="cidade" placeholder="Item">
+            </div>
+            <div class="col-xs-2">
+              <label for="valor">Valor: </label>  
+              <input type="text" class="form-control" id="populacao" placeholder="ex: 50.50">
+            </div>
+            <div> 
+                <button class="btn btn-primary" onclick="addCidade();">Incluir</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-9">
+                <table class="table table-striped table-condensed" id="lista">
+                      <thead>
+                        <tr>
+                          <th style="width: 80%">Item </th>
+                          <th style="width: 10%">Valor</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody id="lista-cidades">
+                           <tr>
+          
+                           </tr>
+                      </tbody>
+                </table>
+                <div class="panel-footer">
+                   <div class="col-xs-3"></div>
+                    <div class="form-group">
+                     <div class="col-sm-offset-9 col-sm-12">
+                        Total: 
+                     
+                        <span id="total">R$  0,00</span>
+                     </div>
+                  </div>
+                    
+                </div>
+                <br>
+                <div class="form-inline">
+                    <div class="col-sm-offset-7 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                          Desconto de <input type="text" class="form-control"> %
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-9 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Desabilitar Total
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+        </div>
+        
+         <div class="form-group">
+             <div class="col-xs-10">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Visualizar</button>
+             </div>
+         </div>
+    </form>
+    
+        </div>
+    
+
+
+        
+   
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+  ...
+        
+    </div>
+  </div>
+</div>
+
+    
+{% endblock %}
+
+{% block javascripts %}
+    
+     <script type="text/javascript">
+     
+     
+     var listaCidades = [];
+
+var listaPopulacao = [];
+
+function addCidade ()
+{
+  
+  var input = document.getElementById('cidade'); // valor digitado
+  //var lista = document.getElementById('lista-cidades'); // destino do input
+  
+  var cidade = input.value;
+  var populacao = document.getElementById('populacao').value;
+  
+  if (listaCidades.indexOf(cidade) == -1)
+  
+  {
+  //lista.innerHTML += "<li>" + cidade + "</li>";
+  listaCidades.push(cidade);
+  listaPopulacao.push(populacao);
+  
+  imprimeVetor(); // chamando segunda função
+  
+} else {
+  
+  window.alert("A Cidade: " + cidade + " já stá cadastrada");
+}
+  
+  input.value = "";
+  input.focus();
+  document.getElementById('populacao').value = "";
+    
+}
+
+function imprimeVetor() 
+{
+  var lista = document.getElementById('lista-cidades'); // destino do input
+  var total = document.getElementById('total');
+  var populacao = 0;
+  var quantCidade = listaCidades.length - 1;
+  
+  lista.innerHTML = "";
+  
+  //listaCidades.sort(); //colocar em ordem
+  
+  for (var i = 0; i <= quantCidade; i++)
+    
+   {       
+  lista.innerHTML += "<tr>" 
+    + "<td>" + listaCidades[i] + "</td><td>" + listaPopulacao[i] + "</td>"
+    + "</tr>";
+    
+     populacao += parseInt(listaPopulacao[i]);
+     
+   }
+  
+  total.innerHTML = populacao;
+  
+}
+  
+  function ordCrescente() 
+  {
+    listaCidades.sort();
+    imprimeVetor();
+    
+  }
+
+ function ordDecrescente() 
+  {
+    listaCidades.sort().reverse();
+    imprimeVetor();
+    
+  }
+
+     
+
+
+
+       
+    </script>
+{% endblock %}
