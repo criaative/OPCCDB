@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/CasaDosBanners/src/SistemaBundle/Resources/views/Default/index.html.twig</file>
+            <file>file:/C:/xampp/htdocs/CasaDosBanners/src/SistemaBundle/Entity/Produtos.php</file>
+            <file>file:/C:/xampp/htdocs/CasaDosBanners/src/SistemaBundle/Controller/ProdutosController.php</file>
+            <file>file:/C:/xampp/htdocs/CasaDosBanners/src/SistemaBundle/Resources/views/Orcamento/index.html.twig</file>
+            <file>file:/C:/xampp/htdocs/CasaDosBanners/src/SistemaBundle/Resources/views/Produtos/index.html.twig</file>
         </group>
     </open-files>
 </project-private>

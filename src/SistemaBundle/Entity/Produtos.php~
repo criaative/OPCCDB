@@ -1,0 +1,55 @@
+<?php
+
+namespace SistemaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ *  Description of Produtos
+ *
+ * @author Criaative
+ * 
+ * @ORM\Entity
+ * @ORM\Table(name="produtos")
+ */
+class Produtos 
+{
+    /**
+    * @ORM\Column(type="integer")
+    * @ORM\Id
+    * @ORM\GeneratedValue(strategy="AUTO")
+    */
+    private $id;
+    
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $nome;
+    
+    /**
+     * @ORM\Column(type="decimal", scale=2)
+     */
+    private $preco;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $descricao;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $categoria;
+    
+    /**
+     * @ORM\Column(type="integer", length=6)
+     */
+    private $largura;
+    
+    /**
+     * @ORM\Column(type="integer", length=6)
+     */
+    private $comprimento;
+    
+}
