@@ -6,8 +6,10 @@
 body{
 	font-size: 12px;
 	font-family: 'Open Sans', arial, tahoma, sans-serif;
-	background:url(../images/bg.png) repeat 0 0 fixed;
+	background-color:#f4f4f4;
 }
+
+
 label, input, button, select, textarea{
 	font-size: 12px;
 }
@@ -270,20 +272,20 @@ section.navbar{
 	margin-bottom:0;
 }
 .navbar-inner.main-menu {	
-	height: 40px;
+	height: 60px;
 	padding-left:10px;	
 	padding-right:0;	
 	border-right: 0;
 	border-left: 0;
 	border-top: 0;
-	border-bottom:5px solid #eb4800;
+	border-bottom:5px solid #00184D;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;	
 	border-radius: 0;
 	filter: none;	
 }
 .navbar-inner.main-menu a.logo{
-	position:absolute;
+        position:absolute;
 }
 .navbar-inner.main-menu ul ul a{
 	font-size:13px;

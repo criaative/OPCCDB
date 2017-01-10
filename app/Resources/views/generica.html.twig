@@ -1,125 +1,125 @@
 <!DOCTYPE html>
 <html>
-   	
-		<meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{% block title %}Casa dos Banners{% endblock %}</title>
-                {% block stylesheets %}{% endblock %}
-		
-		
-		
-		<!-- bootstrap -->
-		<link rel="stylesheet" href="{{ asset('css/bbootstrap.min.css') }}" />
-		<link rel="stylesheet" href="{{ asset('css/bbootstrap-responsive.min.css') }}" />
-		
-		<link rel="stylesheet" href="{{ asset('css/bbootstrappage.css') }}" />
-		
-		<!-- global styles -->
-		<link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
-		<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
 
-		<!-- scripts -->
-		<script type="text/javascript" src="{{ asset('js/jquery-1.7.2.min.js') }}"></script>
-		<script type="text/javascript" src="{{ asset('js/bootstrap.min.j') }}"></script>				
-		<script type="text/javascript" src="{{ asset('js/superfish.js') }}"></script>	
-		<script type="text/javascript" src="{{ asset('js/jquery.scrolltotop.js') }}"></script>
-                
-                
-                
-		
-	
-    <body>		
-		<div id="top-bar" class="container">
-			<div class="row">
-				
-				<div class="span8">
-					<div class="account pull-right">
-						<ul class="user-menu">				
-							{#<li><a href="#">My Account</a></li>
-							<li><a href="cart.html">Your Cart</a></li>
-							<li><a href="checkout.html">Checkout</a></li>					
-							<li><a href="register.html">Login</a></li>#}		
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="wrapper" class="container">
-			<section class="navbar main-menu">
-				<div class="navbar-inner main-menu">				
-                                    <a href="index.html" class="logo pull-left"><h2>Casa Dos Banners</h2></a>
-					<nav id="menu" class="pull-right">
-						<ul>
-							<li><a href="#">Lonas</a>					
-								<ul>
-									<li><a href="./products.html">Brilho</a></li>									
-									<li><a href="./products.html">Fosca</a></li>
-									<li><a href="./products.html">Backdrop</a></li>
-                                                                        <li><a href="./products.html">Ortofônica</a></li>
-                                                                        <li><a href="./products.html">Especiais</a></li>
-                                                                        
-								</ul>
-							</li>															
-							<li><a href="#">Cavaletes</a>
-                                                                <ul>
-									<li><a href="./products.html">Metalico</a></li>									
-									<li><a href="./products.html">Kit Cavalete</a></li>
-									<li><a href="./products.html">Madeira</a></li>
-                                                                        
-								</ul>
-                                                        </li>			
-							<li><a href="./products.html">Banners</a></li>							
-							<li><a href="./products.html">Faixas</a></li>
-							<li><a href="./products.html">Porta Banners</a></li>
-							<li><a href="./products.html">Air Flag</a></li>
-						</ul>
-					</nav>
-                                        </div>
-			</section>
-     
-     
-   <div class="container">
-       
-       
-        {% block body %}{% endblock %}
-        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Casa dos Banners{% endblock %}</title>
+{% block stylesheets %}{% endblock %}
+
+
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="{{ asset('css/bbootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/bbootstrap-responsive.min.css') }}" />
+
+<link rel="stylesheet" href="{{ asset('css/bbootstrappage.css') }}" />
+
+<!-- global styles -->
+<link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+
+<!-- scripts -->
+<script type="text/javascript" src="{{ asset('js/jquery-1.7.2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap.min.j') }}"></script>				
+<script type="text/javascript" src="{{ asset('js/superfish.js') }}"></script>	
+<script type="text/javascript" src="{{ asset('js/jquery.scrolltotop.js') }}"></script>
+
+
+
+
+
+<body>		
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="span4"></div>
+            <div class="span8">
+                <div class="account pull-right">
+                    <ul class="user-menu">				
+                        <li><a href="#">Minha conta</a></li>
+                        <li><a href="cart.html">Carrinho</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>					
+                        <li><a href="register.html">Login</a></li>		
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-        
-        <section id="footer-bar">
-				<div class="row">
-					<div class="span3">
-						<h4>Navigation</h4>
-						<ul class="nav">
-							<li><a href="./index.html">Home</a></li>  
-							<li><a href="./about.html">Sobre nós</a></li>
-							<li><a href="./contact.html">Contato</a></li>
-							<li><a href="./cart.html">Seviços</a></li>
-							<li><a href="./register.html">Clientes</a></li>							
-						</ul>					
-					</div>
-					{#<div class="span4">
-						<h4>My Account</h4>
-						<ul class="nav">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Order History</a></li>
-							<li><a href="#">Wish List</a></li>
-							<li><a href="#">Newsletter</a></li>
-						</ul>
-					</div>#}
-					<div class="span5">
-                                            <p class="logo"><h3>Casa Dos Banners</h3></p>
-						<p>texto complementar do site.</p>
-						<br/>
-						<span class="social_icons">
-                                                    <a class="facebook" href="https://www.facebook.com/CasadosBanners/"><img src="img/face.png"/>Facebook</a>
-						</span>
-					</div>					
-				</div>	
-			</section>
-			<section id="copyright">
-				{#<span>Copyright 2017 Criaative  Todos os direitos reservados.</span>#}
-			</section>
-        
-        {% block javascripts %}{% endblock %}
-    </body>
+    <div id="wrapper" class="container">
+        <section class="navbar main-menu">
+            <div class="navbar-inner main-menu">				
+                <a href="index.html" class="logo pull-left"><img src="{{asset('images/logo.png')}}"></a>
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li><a href="#">Lonas</a>					
+                            <ul>
+                                <li><a href="./products.html">Brilho</a></li>									
+                                <li><a href="./products.html">Fosca</a></li>
+                                <li><a href="./products.html">Backdrop</a></li>
+                                <li><a href="./products.html">Ortofônica</a></li>
+                                <li><a href="./products.html">Especiais</a></li>
+
+                            </ul>
+                        </li>															
+                        <li><a href="#">Cavaletes</a>
+                            <ul>
+                                <li><a href="./products.html">Metalico</a></li>									
+                                <li><a href="./products.html">Kit Cavalete</a></li>
+                                <li><a href="./products.html">Madeira</a></li>
+
+                            </ul>
+                        </li>			
+                        <li><a href="./products.html">Banners</a></li>							
+                        <li><a href="./products.html">Faixas</a></li>
+                        <li><a href="./products.html">Porta Banners</a></li>
+                        <li><a href="./products.html">Air Flag</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+
+        <div class="container">
+
+
+        {% block body %}{% endblock %}
+
+    </div>
+
+    <section id="footer-bar">
+        <div class="row">
+            <div class="span3">
+                <h4>Navigation</h4>
+                <ul class="nav">
+                    <li><a href="./index.html">Home</a></li>  
+                    <li><a href="./about.html">Sobre nós</a></li>
+                    <li><a href="./contact.html">Contato</a></li>
+                    <li><a href="./cart.html">Seviços</a></li>
+                    <li><a href="./register.html">Clientes</a></li>							
+                </ul>					
+            </div>
+            {#<div class="span4">
+                    <h4>My Account</h4>
+                    <ul class="nav">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order History</a></li>
+                            <li><a href="#">Wish List</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                    </ul>
+            </div>#}
+            <div class="span5">
+                <p class="logo"><h3>Casa Dos Banners</h3></p>
+                <p>texto complementar do site.</p>
+                <br/>
+                <span class="social_icons">
+                    <a class="facebook" href="https://www.facebook.com/CasadosBanners/"><img src="img/face.png"/>Facebook</a>
+                </span>
+            </div>					
+        </div>	
+    </section>
+    <section id="copyright">
+        {#<span>Copyright 2017 Criaative  Todos os direitos reservados.</span>#}
+    </section>
+
+{% block javascripts %}{% endblock %}
+</body>
 </html>
