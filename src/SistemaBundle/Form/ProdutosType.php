@@ -13,7 +13,13 @@ class ProdutosType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nome')->add('preco')->add('descricao')->add('categoria')->add('largura')->add('comprimento')        ;
+        $builder->add('nome')
+        		->add('preco')
+        		->add('descricao')
+        		->add('categoria')
+        		->add('largura')
+        		->add('comprimento')
+        		->add('imagem')        ;
     }
     
     /**

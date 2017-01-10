@@ -1,147 +1,282 @@
-{% extends 'base.html.twig' %}
+{% extends 'generica.html.twig' %}
 
 {% block body %}
 
-
-
-    <div class="container-fluid">
-      <div class="row">
-        
-        <div class="col-sm-12  col-md-12  main">
-          <h1 class="page-header">Relatorio</h1>
-
-
-          <h2 class="sub-header">Os em Andamento</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Num:</th>
-                  <th>Cliente</th>
-                  <th>Data</th>
-                  <th>Setor</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <section  class="homepage-slider" id="home-slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="images/carousel/banner-1.jpg" alt="" />
+                </li>
+                <li>
+                    <img src="images/carousel/banner-2.jpg" alt="" />
+                    {#<div class="intro"> // informações sobre o Banner
+                    <h1>Mid season sale</h1>
+                    <p><span>Up to 50% Off</span></p>
+                    <p><span>On selected items online and in stores</span></p>
+                    </div>#}
+                </li>
+            </ul>
+        </div>						
+    </section>
+    <section class="header_text">
+        Conheça nosso Trabalho visite nossas redes sociais . 
+        <br/>Veja algum de nossos Produtos aqui.
+    </section>
+    <section class="main-content">
+        <div class="row">
+            <div class="span12">													
+                <div class="row">
+                    <div class="span12">
+                        <h4 class="title">
+                            <span class="pull-left"><span class="text"><span class="line">Produtos em<strong> Destaque</strong></span></span></span>
+                            <span class="pull-right">
+                                <a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
+                            </span>
+                        </h4>
+                        <div id="myCarousel" class="myCarousel carousel slide">
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <ul class="thumbnails">												
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <span class="sale_tag"></span>
+                                                <p><a href="product_detail.html"><img src="images/ladies/1.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
+                                                <a href="products.html" class="category">Commodo consequat</a>
+                                                <p class="price">$17.25</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <span class="sale_tag"></span>
+                                                <p><a href="product_detail.html"><img src="images/ladies/2.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Quis nostrud exerci tation</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$32.50</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/ladies/3.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Know exactly turned</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$14.20</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/ladies/4.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">You think fast</a><br/>
+                                                <a href="products.html" class="category">World once</a>
+                                                <p class="price">$31.45</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul class="thumbnails">
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/ladies/5.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Know exactly</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$22.30</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/ladies/6.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
+                                                <a href="products.html" class="category">Commodo consequat</a>
+                                                <p class="price">$40.25</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/ladies/7.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">You think water</a><br/>
+                                                <a href="products.html" class="category">World once</a>
+                                                <p class="price">$10.45</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/ladies/8.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Quis nostrud exerci</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$35.50</p>
+                                            </div>
+                                        </li>																																	
+                                    </ul>
+                                </div>
+                            </div>							
+                        </div>
+                    </div>						
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="span12">
+                        <h4 class="title">
+                            <span class="pull-left"><span class="text"><span class="line">Produtos <strong>Recem Add</strong></span></span></span>
+                            <span class="pull-right">
+                                <a class="left button" href="#myCarousel-2" data-slide="prev"></a><a class="right button" href="#myCarousel-2" data-slide="next"></a>
+                            </span>
+                        </h4>
+                        <div id="myCarousel-2" class="myCarousel carousel slide">
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <ul class="thumbnails">												
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <span class="sale_tag"></span>
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware2.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
+                                                <a href="products.html" class="category">Commodo consequat</a>
+                                                <p class="price">$25.50</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware1.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Quis nostrud exerci tation</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$17.55</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware6.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Know exactly turned</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$25.30</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware5.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">You think fast</a><br/>
+                                                <a href="products.html" class="category">World once</a>
+                                                <p class="price">$25.60</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul class="thumbnails">
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware4.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Know exactly</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$45.50</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware3.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
+                                                <a href="products.html" class="category">Commodo consequat</a>
+                                                <p class="price">$33.50</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware2.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">You think water</a><br/>
+                                                <a href="products.html" class="category">World once</a>
+                                                <p class="price">$45.30</p>
+                                            </div>
+                                        </li>
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <p><a href="product_detail.html"><img src="images/cloth/bootstrap-women-ware1.jpg" alt="" /></a></p>
+                                                <a href="product_detail.html" class="title">Quis nostrud exerci</a><br/>
+                                                <a href="products.html" class="category">Quis nostrud</a>
+                                                <p class="price">$25.20</p>
+                                            </div>
+                                        </li>																																	
+                                    </ul>
+                                </div>
+                            </div>							
+                        </div>
+                    </div>						
+                </div>
+                <div class="row feature_box">						
+                    <div class="span4">
+                        <div class="service">
+                            <div class="responsive">	
+                                <img src="images/feature_img_2.png" alt="" />
+                                <h4>MODERN <strong>DESIGN</strong></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>									
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">	
+                        <div class="service">
+                            <div class="customize">			
+                                <img src="images/feature_img_1.png" alt="" />
+                                <h4>FREE <strong>SHIPPING</strong></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="service">
+                            <div class="support">	
+                                <img src="images/feature_img_3.png" alt="" />
+                                <h4>24/7 LIVE <strong>SUPPORT</strong></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
+                            </div>
+                        </div>
+                    </div>	
+                </div>		
+            </div>				
         </div>
-      </div>
-    </div>
-    
-    
+    </section>
+    <section class="our_client">
+        <h4 class="title"><span class="text">Clientes</span></h4>
+        <div class="row">					
+            <div class="span2">
+                <a href="#"><img alt="" src="images/clients/14.png"></a>
+            </div>
+            <div class="span2">
+                <a href="#"><img alt="" src="images/clients/35.png"></a>
+            </div>
+            <div class="span2">
+                <a href="#"><img alt="" src="images/clients/1.png"></a>
+            </div>
+            <div class="span2">
+                <a href="#"><img alt="" src="images/clients/2.png"></a>
+            </div>
+            <div class="span2">
+                <a href="#"><img alt="" src="images/clients/3.png"></a>
+            </div>
+            <div class="span2">
+                <a href="#"><img alt="" src="images/clients/4.png"></a>
+            </div>
+        </div>
+    </section>
+
+
 {% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    controlNav: false,
+                    directionNav: true,
+                    controlsContainer: ".flex-container" // the container that holds the flexslider
+                });
+            });
+        });
+    </script>
+{% endblock %}
+

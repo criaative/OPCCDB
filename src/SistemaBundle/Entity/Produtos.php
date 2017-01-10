@@ -211,4 +211,28 @@ class Produtos
     {
         return $this->comprimento;
     }
+    
+     /**
+     * Set imagem
+     *
+     * @param string $imagem
+     *
+     * @return Produtos
+     */
+    public function setImagem($imagem)
+    {
+        $this->imagem = $imagem;
+
+        return $this;
+    }
+
+    /**
+     * Get imagem
+     *
+     * @return string
+     */
+    public function getImagem()
+    {
+        return $this->imagem;
+    }
 }
