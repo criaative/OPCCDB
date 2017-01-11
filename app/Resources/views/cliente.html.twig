@@ -28,6 +28,7 @@
 
 
 
+
 <body>		
     <div id="top-bar" class="container">
         <div class="row">
@@ -47,7 +48,7 @@
     <div id="wrapper" class="container">
         <section class="navbar main-menu">
             <div class="navbar-inner main-menu">				
-                <a href="index.html" class="logo pull-left"><img src="{{asset('images/logo.png')}}"></a>
+                <a href="{{path('home')}}" class="logo pull-left"><img src="{{asset('images/logo.png')}}"></a>
                 <nav id="menu" class="pull-right">
                     <ul>
                         <li><a href="#">Lonas</a>					
@@ -88,7 +89,7 @@
     <section id="footer-bar">
         <div class="row">
             <div class="span3">
-                <h4>Navigation</h4>
+                <h4></h4>
                 <ul class="nav">
                     <li><a href="./index.html">Home</a></li>  
                     <li><a href="./about.html">Sobre nós</a></li>
@@ -97,15 +98,13 @@
                     <li><a href="./register.html">Clientes</a></li>							
                 </ul>					
             </div>
-            {#<div class="span4">
-                    <h4>My Account</h4>
+            <div class="span4">
+                    <h4></h4>
                     <ul class="nav">
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Order History</a></li>
-                            <li><a href="#">Wish List</a></li>
-                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Termos e Compromissos</a></li>
+                            <li><a href="#">Perguntas Frequentes</a></li>
                     </ul>
-            </div>#}
+            </div>
             <div class="span5">
                 <p class="logo"><h3>Casa Dos Banners</h3></p>
                 <p>texto complementar do site.</p>

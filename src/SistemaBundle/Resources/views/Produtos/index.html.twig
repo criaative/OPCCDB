@@ -3,17 +3,18 @@
 {% block body %}
     <h1>Produtos list</h1>
 
-    <table class="table">
+    <table>
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Codigo</th>
                 <th>Nome</th>
                 <th>Preco</th>
                 <th>Descricao</th>
                 <th>Categoria</th>
                 <th>Largura</th>
                 <th>Comprimento</th>
-                <th>imagem</th>
+                <th>Imagem</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
         {% for produto in produtos %}
             <tr>
                 <td><a href="{{ path('produtos_show', { 'id': produto.id }) }}">{{ produto.id }}</a></td>
+                <td>{{ produto.codigo }}</td>
                 <td>{{ produto.nome }}</td>
                 <td>{{ produto.preco }}</td>
                 <td>{{ produto.descricao }}</td>

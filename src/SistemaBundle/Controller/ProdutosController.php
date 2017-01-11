@@ -133,4 +133,20 @@ class ProdutosController extends Controller
             ->getForm()
         ;
     }
+    
+     /**
+     * Finds and displays a produto entity.
+     *
+     * @Route("/detalis/{id}", name="produtos_detalis")
+     * @Method("GET")
+     */
+    public function detalisAction(Produtos $produto)
+    {
+        $deleteForm = $this->createDeleteForm($produto);
+
+        return $this->render('SistemaBundle:Produtos:detalis.html.twig', array(
+            'produto' => $produto,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
 }

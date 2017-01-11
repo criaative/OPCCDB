@@ -23,6 +23,11 @@ class Produtos
     private $id;
     
     /**
+     * @ORM\Column(type="string", length=6)
+     */
+    private $codigo;
+    
+    /**
      * @ORM\Column(type="string", length=100)
      */
     private $nome;
@@ -56,7 +61,7 @@ class Produtos
      * @ORM\Column(type="string", length=50)
      */
     private $imagem;
-    
+
 
     /**
      * Get id
@@ -66,6 +71,30 @@ class Produtos
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set codigo
+     *
+     * @param string $codigo
+     *
+     * @return Produtos
+     */
+    public function setCodigo($codigo)
+    {
+        $this->codigo = $codigo;
+
+        return $this;
+    }
+
+    /**
+     * Get codigo
+     *
+     * @return string
+     */
+    public function getCodigo()
+    {
+        return $this->codigo;
     }
 
     /**
@@ -211,8 +240,8 @@ class Produtos
     {
         return $this->comprimento;
     }
-    
-     /**
+
+    /**
      * Set imagem
      *
      * @param string $imagem
