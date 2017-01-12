@@ -6,26 +6,24 @@
     <title>{% block title %}Casa dos Banners{% endblock %}</title>
 {% block stylesheets %}{% endblock %}
 
-
-
 <!-- bootstrap -->
-<link rel="stylesheet" href="{{ asset('css/bbootstrap.min.css') }}" />
-<link rel="stylesheet" href="{{ asset('css/bbootstrap-responsive.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/bootstrap-responsive.min.css') }}" />
 
-<link rel="stylesheet" href="{{ asset('css/bbootstrappage.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/bootstrappage.css') }}" />
 
 <!-- global styles -->
 <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/jquery.fancybox.css') }}" />
 
 <!-- scripts -->
 <script type="text/javascript" src="{{ asset('js/jquery-1.7.2.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap.min.j') }}"></script>				
+
+<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>				
 <script type="text/javascript" src="{{ asset('js/superfish.js') }}"></script>	
 <script type="text/javascript" src="{{ asset('js/jquery.scrolltotop.js') }}"></script>
-
-
-
+<script type="text/javascript" src="{{ asset('js/jquery.fancybox.js') }}"></script>
 
 
 
@@ -35,11 +33,12 @@
             <div class="span4"></div>
             <div class="span8">
                 <div class="account pull-right">
-                    <ul class="user-menu">				
-                        <li><a href="#">Minha conta</a></li>
-                        <li><a href="cart.html">Carrinho</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>					
-                        <li><a href="register.html">Login</a></li>		
+                    <ul class="user-menu">
+                        
+                        <li><a href="./contact.html">Contato</a></li>
+                        <li><a href="./about.html">Sobre nós</a></li>
+                        <li><a href="./cart.html">Seviços</a></li>
+                        <li><a href="./register.html">Login</a></li>							
                     </ul>
                 </div>
             </div>
@@ -61,18 +60,19 @@
 
                             </ul>
                         </li>															
-                        <li><a href="#">Cavaletes</a>
+                        <li><a href="{{ path('subcategorias_index') }}">CAvalete</a>
                             <ul>
                                 <li><a href="./products.html">Metalico</a></li>									
                                 <li><a href="./products.html">Kit Cavalete</a></li>
                                 <li><a href="./products.html">Madeira</a></li>
+                                
 
                             </ul>
                         </li>			
                         <li><a href="./products.html">Banners</a></li>							
                         <li><a href="./products.html">Faixas</a></li>
                         <li><a href="./products.html">Porta Banners</a></li>
-                        <li><a href="./products.html">Air Flag</a></li>
+                        <li><a href="./products.html">Bandeira</a></li>
                     </ul>
                 </nav>
             </div>
@@ -110,7 +110,7 @@
                 <p>texto complementar do site.</p>
                 <br/>
                 <span class="social_icons">
-                    <a class="facebook" href="https://www.facebook.com/CasadosBanners/"><img src="img/face.png"/>Facebook</a>
+                    <a class="facebook" href="https://www.facebook.com/CasadosBanners/">Facebook</a>
                 </span>
             </div>					
         </div>	
@@ -120,5 +120,24 @@
     </section>
 
 {% block javascripts %}{% endblock %}
+
+    <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    controlNav: false,
+                    directionNav: true,
+                    controlsContainer: ".flex-container" // the container that holds the flexslider
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>

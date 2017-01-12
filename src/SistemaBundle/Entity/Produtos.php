@@ -264,4 +264,9 @@ class Produtos
     {
         return $this->imagem;
     }
+    
+    public function __toString() 
+    {
+        return $this->id .'-'. $this->nome;
+    }
 }
