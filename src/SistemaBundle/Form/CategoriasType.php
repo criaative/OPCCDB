@@ -5,7 +5,6 @@ namespace SistemaBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class CategoriasType extends AbstractType
 {
@@ -15,7 +14,7 @@ class CategoriasType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('nome')
-                ->add('subcategorias')
+                ->add('Produtos')
                 ;
     }
     

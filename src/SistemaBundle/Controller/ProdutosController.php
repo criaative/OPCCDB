@@ -5,7 +5,8 @@ namespace SistemaBundle\Controller;
 use SistemaBundle\Entity\Produtos;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Produto controller.
@@ -132,21 +133,5 @@ class ProdutosController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
-    }
-    
-     /**
-     * Finds and displays a produto entity.
-     *
-     * @Route("/detalis/{id}", name="produtos_detalis")
-     * @Method("GET")
-     */
-    public function detalisAction(Produtos $produto)
-    {
-        $deleteForm = $this->createDeleteForm($produto);
-
-        return $this->render('SistemaBundle:Produtos:detalis.html.twig', array(
-            'produto' => $produto,
-            'delete_form' => $deleteForm->createView(),
-        ));
     }
 }

@@ -1,4 +1,4 @@
-{% extends 'cliente.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
     <h1>Categoria</h1>
@@ -12,6 +12,10 @@
             <tr>
                 <th>Nome</th>
                 <td>{{ categoria.nome }}</td>
+            </tr>
+            <tr>
+                <th>Produtos</th>
+                <td>{{ produtos }}</td>
             </tr>
         </tbody>
     </table>

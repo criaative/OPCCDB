@@ -43,11 +43,6 @@ class Produtos
     private $descricao;
     
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $categoria;
-    
-    /**
      * @ORM\Column(type="integer", length=6)
      */
     private $largura;
@@ -61,7 +56,12 @@ class Produtos
      * @ORM\Column(type="string", length=50)
      */
     private $imagem;
-
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Categorias", inversedBy="produtos")
+     * @ORM\JoinColumn(name="categorias_id", referencedColumnName="id")
+     */
+    private $categorias;
 
     /**
      * Get id
@@ -170,30 +170,6 @@ class Produtos
     }
 
     /**
-     * Set categoria
-     *
-     * @param string $categoria
-     *
-     * @return Produtos
-     */
-    public function setCategoria($categoria)
-    {
-        $this->categoria = $categoria;
-
-        return $this;
-    }
-
-    /**
-     * Get categoria
-     *
-     * @return string
-     */
-    public function getCategoria()
-    {
-        return $this->categoria;
-    }
-
-    /**
      * Set largura
      *
      * @param integer $largura
@@ -264,9 +240,28 @@ class Produtos
     {
         return $this->imagem;
     }
-    
-    public function __toString() 
+
+    /**
+     * Set categorias
+     *
+     * @param \SistemaBundle\Entity\Categorias $categorias
+     *
+     * @return Produtos
+     */
+    public function setCategorias(\SistemaBundle\Entity\Categorias $categorias = null)
     {
-        return $this->id .'-'. $this->nome;
+        $this->categorias = $categorias;
+
+        return $this;
+    }
+
+    /**
+     * Get categorias
+     *
+     * @return \SistemaBundle\Entity\Categorias
+     */
+    public function getCategorias()
+    {
+        return $this->categorias;
     }
 }
