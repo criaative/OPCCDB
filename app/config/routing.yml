@@ -1,3 +1,0 @@
-app:
-    resource: "@SistemaBundle/Controller/"
-    type:     annotation
