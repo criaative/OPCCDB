@@ -37,6 +37,7 @@ $_['text_option']                    = 'Opções';
 $_['text_order']                     = 'Pedidos';
 $_['text_order_status']              = 'Situações de pedidos';
 $_['text_product']                   = 'Produtos';
+$_['text_apresentacao']                   = 'Apresentação';
 $_['text_reports']                   = 'Relatórios';
 $_['text_report_sale']               = 'Vendas';
 $_['text_report_sale_order']         = 'Pedidos';

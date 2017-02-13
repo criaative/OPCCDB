@@ -1,13 +1,21 @@
 <?php echo $header; ?><?php echo $column_left; ?>
+
+
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
+          <!-- Large modal -->
+          <button type="button" form="form-product" onclick="javascript:enviar();" class="btn btn-primary">Clique aqui</button>
         <button type="submit" form="form-product" data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-primary"><i class="fa fa-save"></i></button>
         <a href="<?php echo $cancel; ?>" data-toggle="tooltip" title="<?php echo $button_cancel; ?>" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
       <h1><?php echo $heading_title; ?></h1>
       <ul class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+        
+        
+        
+        
         <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
         <?php } ?>
       </ul>
@@ -23,8 +31,16 @@
       <div class="panel-heading">
         <h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $text_form; ?></h3>
       </div>
+        
+            
+        
       <div class="panel-body">
-        <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-product" class="form-horizontal">
+          
+          <input type="hidden" name="" id="valor" value="<form  action='http://localhost/CasaDosBanners/admin/view/index.php' method='post'>" />
+          <div id="texto"> </div>
+          <form  action="<?php echo $action; ?>" name="form01"  method="post" enctype="multipart/form-data" id=" form-product" class="form-horizontal">
+         
+          
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
@@ -42,6 +58,7 @@
             <div class="tab-pane active" id="tab-general">
               <ul class="nav nav-tabs" id="language">
                 <?php foreach ($languages as $language) { ?>
+                         
                 <li><a href="#language<?php echo $language['language_id']; ?>" data-toggle="tab"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a></li>
                 <?php } ?>
               </ul>
@@ -99,6 +116,9 @@
                 <label class="col-sm-2 control-label" for="input-model"><?php echo $entry_model; ?></label>
                 <div class="col-sm-10">
                   <input type="text" name="model" value="<?php echo $model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
+                  
+         
+                  
                   <?php if ($error_model) { ?>
                   <div class="text-danger"><?php echo $error_model; ?></div>
                   <?php } ?>
@@ -452,6 +472,8 @@
                 <div class="col-sm-2">
                   <ul class="nav nav-pills nav-stacked" id="option">
                     <?php $option_row = 0; ?>
+                    
+                    
                     <?php foreach ($product_options as $product_option) { ?>
                     <li><a href="#tab-option<?php echo $option_row; ?>" data-toggle="tab"><i class="fa fa-minus-circle" onclick="$('a[href=\'#tab-option<?php echo $option_row; ?>\']').parent().remove(); $('#tab-option<?php echo $option_row; ?>').remove(); $('#option a:first').tab('show');"></i> <?php echo $product_option['name']; ?></a></li>
                     <?php $option_row++; ?>
@@ -922,6 +944,8 @@
       </div>
     </div>
   </div>
+    
+       
   <script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
   <link href="view/javascript/summernote/summernote.css" rel="stylesheet" />
   <script type="text/javascript" src="view/javascript/summernote/opencart.js"></script>
@@ -1410,5 +1434,53 @@ $('.datetime').datetimepicker({
   <script type="text/javascript"><!--
 $('#language a:first').tab('show');
 $('#option a:first').tab('show');
-//--></script></div>
+//--></script>
+   <script type="text/javascript">
+
+function palavra() {
+  
+  var input = document.getElementById('valor');
+  var texto = document.getElementById('texto');
+
+  
+  var valor = input.value;
+  valor = valor.toLowerCase();
+  
+  var partes = valor.split(" ");
+  
+  var novo = "";
+
+  for (var i = 0; i < partes.length; i++){
+    
+    var parte = partes[i];
+    novo += parte.charAt(0).toUpperCase();
+    novo += parte.slice(1);
+    novo +=" ";
+     
+  }
+
+  
+  texto.innerHTML = novo;
+  console.log(novo);
+
+ }
+
+
+</script>
+ <script type="text/javascript">
+                                                                                                                                                                         
+                                                                                                                                                                         function enviar() {	
+                                                                                                                                                                         
+    document.form01.action = 'http://localhost/CasaDosBanners/admin/view/index.php';
+    
+    document.form01.submit();}function rm() {	
+    
+    document.form01.action = 'remover.asp';	
+    
+    document.form01.submit();
+    
+    }
+    
+    </script></div>
+
 <?php echo $footer; ?>
