@@ -9,6 +9,7 @@ class conexao
     private $pw;
     private $dbname;
     private $opcao;
+    public $con;
 
     public function __construct() {
         $this->host = 'localhost';
@@ -19,7 +20,10 @@ class conexao
     }
 
     public function pdo() {
-        return new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbname, $this->usuario, $this->pw, $this->opcao);
+        
+   return $con = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbname, $this->usuario, $this->pw, $this->opcao);
+   
+   
     }
 
 }

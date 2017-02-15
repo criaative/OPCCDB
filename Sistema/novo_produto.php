@@ -9,13 +9,9 @@ $exec = $con->pdo()->prepare($sql);
 $exec->execute();
 
 $dados = $exec->fetchAll(PDO::FETCH_ASSOC);
-?>
-<!DOCTYPE html>
 
-<?php
+
 include 'header/header.php';
-
-echo $header;
 ?>
 
 
@@ -30,7 +26,7 @@ echo $header;
     <!-- Form Name -->
 
 
-    <form method="Post" action="conexao/new_action.php">
+    <form method="Post" action="action/novo_produto_action.php">
 
 
         <div class="row">
@@ -51,6 +47,7 @@ echo $header;
 
                     <fieldset>
                         <div class="col-xs-2">
+                            <input type="hidden" name="language_id" value="2">
                             <input type="text" name="cod" class="form-control" placeholder="0000">
                         </div>
                         <div class="col-xs-3">
@@ -66,12 +63,17 @@ echo $header;
                     <br>
                     <fieldset>
                         <div class="col-xs-2">
-                            <select class="form-control">
+                            <select name="categoria" class="form-control">
+                                <option value="0">-------</option>
                                 <?php foreach ($dados as $v) { ?>
-                                    <option value="<?= $v['name'] ?>"><?= $v['name'] ?></option>
-                                <?php } ?>
+                                    <option value="<?= $v['category_id'] ?>"><?= $v['name'] ?></option>
+                                <?php
+                                } ?>
                             </select>
+                            
+                            
                         </div>
+                        
                         <div class="col-xs-2">
                             <input type="text" name="precoCusto" class="form-control" placeholder="Preço custo">
                         </div>
@@ -107,11 +109,11 @@ echo $header;
                         <br>
                         <div class="col-xs-3">
 
-                            <input type="radio" value="1">
+                            <input type="radio" value="1" >
                             <label>Habilitado</label>
                         </div>
                         <div class="col-xs-6">
-                            <input type="radio" value="0">
+                            <input type="radio" value="0" checked="">
                             <label>Desabilitado</label>
                         </div>
 

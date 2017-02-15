@@ -1,4 +1,5 @@
-<?php $header =' 
+   
+<!DOCTYPE html>
 
 <html lang="pt-br">
     
@@ -76,5 +77,3 @@
           </ul>
         </div> -->
         
-          
-'; ?>
