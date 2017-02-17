@@ -4,7 +4,7 @@ include_once './select/lista_produto.php';
 include 'header/header.php';
 ?>
 
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<div class="container">
     <h1 class="page-header">Produtos</h1>
 
 
@@ -16,6 +16,7 @@ include 'header/header.php';
                     <th></th>
                     <th></th>
                     <th></th>
+                    <th></th>
                     <th>Marcap</th>
                     <th id="mcsite"><a href="marcap/mcpsite_action.php?site=<?= $mcpsite ?>"><?= $mcpsite ?></a></th>
                     <th id="mcsite"><a href="marcap/mcploja_action.php?loja=<?= $mcploja ?>"><?= $mcploja ?></a></th>
@@ -23,9 +24,10 @@ include 'header/header.php';
                 </tr>
                 <tr>
                     <th style=" width:5%">Status</th>
+                    <th style=" width:5%">imag</th>
                     <th style=" width:2%">id</th>
                     <th style=" width:3%">cod</th>
-                    <th style="width:20%">Produto</th>
+                    <th style="width:15%">Produto</th>
                     <th style="width:15%">modelo</th>
                     <th style="width:15%">Categoria</th>
                     <th style="width:5%">custo</th>
@@ -45,18 +47,19 @@ include 'header/header.php';
                                 echo '<div style="color: blue;">Online</div>';
                             };
                             ?></td>
-                        <td><?= $v ['id'] ?></td>
-                        <td><?= $v ['sku'] ?></td>
-                        <td><?= $v ['produto'] ?></td>
-                        <td><?= $v ['model'] ?></td>
-                        <td><?= $v ['categoria'] ?></td>
-                        <td><?= $v ['materia'] ?></td>
-                        <td><?= $v ['preco_site'] ?></td>
-                        <td><?= $v ['preco_loja'] ?></td>
-                        <td><a href="editarproduto.php?id=<?= $v ['id'] ?>" class="btn btn-primary">
+                        <td><img src="http://localhost/CasaDosBanners/image/<?= $v ['image'] ?>" width="80%"></td>
+                        <td><?= $v['id'] ?></td>
+                        <td><?= $v['sku'] ?></td>
+                        <td><?= $v['produto'] ?></td>
+                        <td><?= $v['model'] ?></td>
+                        <td><?= $v['categoria'] ?></td>
+                        <td><?= $v['materia'] ?></td>
+                        <td><?= $v['preco_site'] ?></td>
+                        <td><?= $v['preco_loja'] ?></td>
+                        <td><a href="editarproduto.php?id=<?= $v['id'] ?>" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 
-                                <a href="action/delete_action.php?id=<?= $v ['id'] ?>" class="btn btn-danger">
+                                <a href="action/delete_action.php?id=<?= $v['id'] ?>" class="btn btn-danger">
                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                         </td>
                     </tr>
@@ -102,5 +105,6 @@ include 'header/header.php';
         </div>
     </div>
 </div>
+
 </body>
 </html>

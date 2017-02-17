@@ -3,9 +3,7 @@ include_once './conexao/conexao.php';
 
 $con = new conexao();
 
-$sql = 'SELECT 
-    *
-FROM
+$sql = 'SELECT *,pro.id FROM
     produtos pro
         LEFT JOIN
     categorias cat ON pro.id = cat.id group by pro.id ';
@@ -35,4 +33,4 @@ $sql2 = 'select * from loja.categorias ';
 $exec2 = $con->pdo()->prepare($sql2);
 $exec2->execute();
 
-$dados2 = $exec->fetchAll(PDO::FETCH_ASSOC);
+$dados2 = $exec2->fetchAll(PDO::FETCH_ASSOC);

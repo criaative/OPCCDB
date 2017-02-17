@@ -22,6 +22,16 @@ $exec2->execute();
 
 $dados2 = $exec2->fetchAll(PDO::FETCH_ASSOC);
 
+
+$sql3 = 'select * from loja.oc_product_image where product_id = :id ';
+
+$exec3 = $con->pdo()->prepare($sql3);
+
+$all_dados3[':id'] = $id;
+$exec3->execute($all_dados3);
+
+$imagens = $exec3->fetchAll(PDO::FETCH_ASSOC);
+
 include 'header/header.php';
 ?>
 
@@ -39,7 +49,11 @@ include 'header/header.php';
             <div class="col-md-4">
 
                 <img src="http://localhost/CasaDosBanners/image/<?= $dados['0']['image'] ?>" width="300px" alt="..." class="img-rounded">
-
+                <br>
+                <br>
+                <?php foreach ($imagens as $v): ?>
+                    <img src="http://localhost/CasaDosBanners/image/<?= $v['image'] ?>" width="100px" alt="..." class="img-rounded">
+                <?php endforeach; ?>
             </div>
 
             <div class="col-md-8">
@@ -48,7 +62,7 @@ include 'header/header.php';
 
                     <fieldset>
                         <div class="col-xs-2">
-                            <input type="hidden" name="id" value="<?= $dados['0']['id'] ?>" class="form-control">
+                            <input type="hidden" name="id" value="<?= $id ?>" class="form-control">
                             <input type="text" name="cod" value="<?= $dados['0']['sku'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-3">

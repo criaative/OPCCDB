@@ -8,8 +8,19 @@ $sql = 'select * from oc_category_description';
 $exec = $con->pdo()->prepare($sql);
 $exec->execute();
 
-$dados = $exec->fetchAll(PDO::FETCH_ASSOC);
+$categorias = $exec->fetchAll(PDO::FETCH_ASSOC);
 
+
+$sql2 = 'SELECT 
+    att.attribute_id, attd.name
+FROM
+    oc_attribute att
+    left join oc_attribute_description attd on attd.attribute_id = att.attribute_id ';
+
+$exec2 = $con->pdo()->prepare($sql2);
+$exec2->execute();
+
+$atributos = $exec2->fetchAll(PDO::FETCH_ASSOC);
 
 include 'header/header.php';
 ?>
@@ -30,9 +41,10 @@ include 'header/header.php';
 
 
         <div class="row">
-            <div class="col-md-4">
+            <!--<div class="col-md-4">
+ 
 
-                <img src="image/image.jpg" width="350px" alt="..." class="img-rounded">
+                 <img src="image/image.jpg" width="350px" alt="..." class="img-rounded">
                 <br>
                 <br>
                 <img src="image/image.jpg" width="100px" alt="..." class="img-rounded">
@@ -41,7 +53,8 @@ include 'header/header.php';
 
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-8">-->
+            <div class="container">
 
                 <div class="row">
 
@@ -65,15 +78,15 @@ include 'header/header.php';
                         <div class="col-xs-2">
                             <select name="categoria" class="form-control">
                                 <option value="0">-------</option>
-                                <?php foreach ($dados as $v) { ?>
+                                <?php foreach ($categorias as $v) { ?>
                                     <option value="<?= $v['category_id'] ?>"><?= $v['name'] ?></option>
-                                <?php
-                                } ?>
+                                <?php }
+                                ?>
                             </select>
-                            
-                            
+
+
                         </div>
-                        
+
                         <div class="col-xs-2">
                             <input type="text" name="precoCusto" class="form-control" placeholder="Preço custo">
                         </div>
@@ -117,11 +130,17 @@ include 'header/header.php';
                             <label>Desabilitado</label>
                         </div>
 
-                        <br><div>
-                            <button type="submit" class="btn btn-default">Salvar</button>
-                        </div>
 
                     </fieldset>
+                    
+                    <div class="form-group">
+                        <br>
+                        <div class="col-sm-offset-8 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </div>
+
+
 
 
 

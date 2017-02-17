@@ -8,7 +8,7 @@ $sku = $_POST['cod'];
 $name = $_POST['produto'];
 $description = $_POST['descricao'];
 $model = $_POST['modelo'];
-$image = null;
+//$image = $_POST['image'];
 $quantity = $_POST['estoque'];
 $price = $_POST['precoSite'];
 $weight = $_POST['peso'];
@@ -18,12 +18,13 @@ $height = $_POST['altura'];
 $materia = $_POST['precoCusto'];
 $status = $_POST['status'];
 $preco_loja = $_POST['precoLoja'];
+$categoria = $_POST['categoria'];
 
+echo'<pre><hr>';
+print_r($_POST);
+echo'<hr></pre>';
 
-
-
-
-
+//exit;
 $sql = "update oc_product
         LEFT JOIN
     oc_product_description ON oc_product_description.product_id = oc_product.product_id 
@@ -33,7 +34,6 @@ $sql = "update oc_product
                     oc_product_description.name = :name, 
                     oc_product_description.description = :description,
                     oc_product.model = :model,
-                    oc_product.image = :image,
                     oc_product.quantity = :quantity,
                     oc_product.price = :price,
                     oc_product.weight = :weight,
@@ -54,7 +54,7 @@ $all_dados[':sku'] = $sku;
 $all_dados[':name'] = $name;
 $all_dados[':description'] = $description;
 $all_dados[':model'] = $model;
-$all_dados[':image'] = $image;
+//$all_dados[':image'] = $image;
 $all_dados[':quantity'] = $quantity;
 $all_dados[':price'] = $price;
 $all_dados[':weight'] = $weight;
@@ -71,8 +71,14 @@ $exec = $con->pdo()->prepare($sql);
 
 $exec->execute($all_dados);
 
+$sql2 = "update loja.oc_product_to_category set category_id = :categoria 
+    where product_id = :id ";
+
+
+$all_dados2[':categoria'] = $categoria;
+$all_dados2[':id'] = $id;
+
+$exec2 = $con->pdo()->prepare($sql2);
+$exec2->execute($all_dados2);
 
 header("location: ../index.php");
-
-
-
