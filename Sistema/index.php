@@ -1,5 +1,5 @@
 <?php
-include_once './select/lista_produto.php';
+include_once './model/lista_produto.php';
 
 include 'header/header.php';
 ?>
@@ -9,65 +9,70 @@ include 'header/header.php';
 
 
     <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th colspan="3"><a href="novo_produto.php">Novo Produto</a></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>Marcap</th>
-                    <th id="mcsite"><a href="marcap/mcpsite_action.php?site=<?= $mcpsite ?>"><?= $mcpsite ?></a></th>
-                    <th id="mcsite"><a href="marcap/mcploja_action.php?loja=<?= $mcploja ?>"><?= $mcploja ?></a></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th style=" width:5%">Status</th>
-                    <th style=" width:5%">imag</th>
-                    <th style=" width:2%">id</th>
-                    <th style=" width:3%">cod</th>
-                    <th style="width:15%">Produto</th>
-                    <th style="width:15%">modelo</th>
-                    <th style="width:15%">Categoria</th>
-                    <th style="width:5%">custo</th>
-                    <th style="width:5%">site</th>
-                    <th style="width:5%">loja</th>
-                    <th style="width:15%">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($dados AS $v) { ?>
-
+        <div class="panel panel-info">
+            <div class="panel-heading"><h4>Produtos</h4></div>
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                        <td><?php
-                            if ($v['status'] == 0) {
-                                echo'<div style="color: red;">Offline</div>';
-                            } else {
-                                echo '<div style="color: blue;">Online</div>';
-                            };
-                            ?></td>
-                        <td><img src="http://localhost/CasaDosBanners/image/<?= $v ['image'] ?>" width="80%"></td>
-                        <td><?= $v['id'] ?></td>
-                        <td><?= $v['sku'] ?></td>
-                        <td><?= $v['produto'] ?></td>
-                        <td><?= $v['model'] ?></td>
-                        <td><?= $v['categoria'] ?></td>
-                        <td><?= $v['materia'] ?></td>
-                        <td><?= $v['preco_site'] ?></td>
-                        <td><?= $v['preco_loja'] ?></td>
-                        <td><a href="editarproduto.php?id=<?= $v['id'] ?>" class="btn btn-primary">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                        <th colspan="3"><a href="novo_produto.php">Novo Produto</a></th>
 
-                                <a href="action/delete_action.php?id=<?= $v['id'] ?>" class="btn btn-danger">
-                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                        </td>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th id="mcsite"><a href="marcap/mcpsite_action.php?site=<?= $mcpsite ?>"><?= $mcpsite ?></a></th>
+                        <th id="mcsite"><a href="marcap/mcploja_action.php?loja=<?= $mcploja ?>"><?= $mcploja ?></a></th>
+                        <th><a href="#" data-toggle="modal" data-target="#modalMarcap">Marcap</a></th>
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                    <tr>
+                        <th>Status</th>
+                        <th style=" width:40px">imag</th>
+                        <th>cod</th>
+                        <th>Produto</th>
+                        <th>modelo</th>
+                        <th>Categoria</th>
+                        <th>custo</th>
+                        <th>site</th>
+                        <th>loja</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($dados AS $v) { ?>
+
+                        <tr>
+                            <td><?php
+                                if ($v['status'] == 0) {
+                                    echo'<div>Offline</div>';
+                                } else {
+                                    echo '<div style="color: blue;">Online</div>';
+                                };
+                                ?></td>
+                            <td><img src="http://localhost/CasaDosBanners/image/<?= $v ['image'] ?>" width="90%"></td>
+                            <td><?= $v['sku'] ?></td>
+                            <td><a href="show_produto.php?id=<?= $v['id'] ?>"><strong><?= $v['produto'] ?></strong></a></td>
+                            <td><?= $v['model'] ?></td>
+                            <td><?= $v['categoria'] ?></td>
+                            <td><?= $v['materia'] ?></td>
+                            <td><?= $v['preco_site'] ?></td>
+                            <td><?= $v['preco_loja'] ?></td>
+                            <td><a href="editarproduto.php?id=<?= $v['id'] ?>" class="btn btn">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+
+                                            <!-- <a href="model/delete_action.php?id=<?= $v['id'] ?>" class="btn btn">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a> -->
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+
+            <div class="panel-footer">Panel footer</div>
+        </div>
     </div>
-</div>
 </div>
 </div>
 
@@ -91,8 +96,8 @@ include 'header/header.php';
                         <input type="radio" name="num" value="1" id="exampleInputEmail2" >
                         <label for="exampleInputEmail2">Marcap Site</label>
 
-                        <input type="radio" name="num" value="2" id="exampleInputEmail2" >
-                        <label for="exampleInputEmail2">Marcap Loja</label>
+                        <input type="radio" name="num" value="2" id="exampleInputEmail3" >
+                        <label for="exampleInputEmail3">Marcap Loja</label>
                     </div>
                 </div>
                 <div class="modal-footer">

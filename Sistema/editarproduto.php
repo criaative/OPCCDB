@@ -42,7 +42,7 @@ include 'header/header.php';
 
     </div>
 
-    <form method="Post" action="action/editarproduto_action.php">
+    <form method="Post" action="model/editarproduto_action.php">
 
 
         <div class="row">

@@ -13,7 +13,7 @@ $length = $_POST['comprimento'];
 $width = $_POST['largura'];
 $height = $_POST['altura'];
 $length_class_id = 'NULL';
-$status = 'NULL';
+$status = $_POST['status'];
 $materia = $_POST['precoCusto'];
 $preco_loja = $_POST['precoLoja'];
 $produto = $_POST['produto'];
@@ -21,6 +21,21 @@ $descricao = $_POST['descricao'];
 $categoria = $_POST['categoria'];
 $language_id = $_POST['language_id'];
 
+$cor = $_POST['Cor:'];
+$acabamento =  $_POST['Acabamento:'];
+$tamanho =  $_POST['Tamanho:'];
+$impressão =  $_POST['Impressão:'];
+$quantidade =  $_POST['Quantidade:'];
+$tamanhoSangra =  $_POST['Tamanho_com_Sangra:'];
+$acabamentoIncluso =  $_POST['Acabamento_Incluso:'];
+$prazoEntrega =  $_POST['Prazo_de_entrega:'];
+$codigo =  $_POST['Codigo:'];
+$peso =  $_POST['Peso:_'];
+
+echo'<pre><hr>';
+print_r($_POST);
+echo'<hr></pre>';
+exit;
 $sql = "INSERT INTO loja.oc_product(
         product_id,
         model,
@@ -90,6 +105,16 @@ $all_dados1[':language_id'] = $language_id;
 $exec1 = $con->prepare($sql1);
 $exec1->execute($all_dados1);
 
+
+$sql2 = "INSERT INTO loja.oc_product_to_category(
+        product_id, category_id) VALUES (:id_pro, :categoria)";
+
+
+$all_dados2[':categoria'] = $categoria;
+$all_dados2[':id_pro'] = $id_pro;
+
+$exec2 = $con->prepare($sql2);
+$exec2->execute($all_dados2);
 
 $sql2 = "INSERT INTO loja.oc_product_to_category(
         product_id, category_id) VALUES (:id_pro, :categoria)";

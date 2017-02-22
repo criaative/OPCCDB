@@ -68,11 +68,9 @@ $all_dados[':preco_loja'] = $preco_loja;
 
 
 $exec = $con->pdo()->prepare($sql);
-
 $exec->execute($all_dados);
 
-$sql2 = "update loja.oc_product_to_category set category_id = :categoria 
-    where product_id = :id ";
+$sql2 = "INSERT INTO loja.oc_product_to_category (product_id, category_id) VALUES (':id', ':categoria')";
 
 
 $all_dados2[':categoria'] = $categoria;
@@ -80,5 +78,15 @@ $all_dados2[':id'] = $id;
 
 $exec2 = $con->pdo()->prepare($sql2);
 $exec2->execute($all_dados2);
+
+$sql3 = "update loja.oc_product_to_category set category_id = :categoria 
+    where product_id = :id ";
+
+
+$all_dados3[':categoria'] = $categoria;
+$all_dados3[':id'] = $id;
+
+$exec3 = $con->pdo()->prepare($sql3);
+$exec3->execute($all_dados3);
 
 header("location: ../index.php");
