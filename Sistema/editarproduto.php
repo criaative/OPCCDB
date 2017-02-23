@@ -32,6 +32,32 @@ $exec3->execute($all_dados3);
 
 $imagens = $exec3->fetchAll(PDO::FETCH_ASSOC);
 
+$attId = 'SELECT 
+    att.attribute_id,
+    attg.attribute_group_id,
+    attgd.name,
+    attgd.language_id,
+    attd.name,
+    proa.text
+FROM
+    oc_attribute_group attg
+        LEFT JOIN
+    oc_attribute_group_description attgd ON attgd.attribute_group_id = attg.attribute_group_id
+        LEFT JOIN
+    oc_attribute att ON att.attribute_group_id = attgd.attribute_group_id
+        LEFT JOIN
+    oc_attribute_description attd ON attd.attribute_id = att.attribute_id
+        LEFT JOIN
+    oc_product_attribute proa ON proa.attribute_id = att.attribute_id
+    where product_id = :id
+     ';
+
+
+$att_id = $con->pdo()->prepare($attId);
+$all_att[':id'] = $id;
+$att_id->execute($all_att);
+$atributos = $att_id->fetchAll(PDO::FETCH_ASSOC);
+
 include 'header/header.php';
 ?>
 
@@ -128,10 +154,41 @@ include 'header/header.php';
                             <input type="radio" name="status" value="0" checked>
                             <label>Desabilitado</label>
                         </div>
-
-                        <br><div>
-                            <button type="submit" class="btn btn-default">Salvar</button>
-                        </div>
+                    </fieldset>
+                        <br>
+                        <fieldset>
+                            <div class="col-xs-3">
+                                <input type="text" name="<?= $atributos['0']['name'] ?>" class="form-control" value="<?= $atributos['0']['text'] ?>">
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" name="<?= $atributos['1']['name'] ?>" class="form-control" value="<?= $atributos['1']['text'] ?>">
+                            </div>
+                            <div class="col-xs-3">
+                                <input type="text" name="<?= $atributos['2']['name'] ?>" class="form-control" value="<?= $atributos['2']['text'] ?>">
+                            </div>
+                            
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <div class="col-xs-2">
+                                <input type="text" name="<?= $atributos['3']['name'] ?>" class="form-control" value="<?= $atributos['3']['text'] ?>">
+                            </div>
+                            <div class="col-xs-3">
+                                <input type="text" name="<?= $atributos['5']['name'] ?>" class="form-control" value="<?= $atributos['5']['text'] ?>">
+                            </div>
+                            <div class="col-xs-3">
+                                <input type="text" name="<?= $atributos['6']['name'] ?>" class="form-control" value="<?= $atributos['6']['text'] ?>">
+                            </div>
+                            <div class="col-xs-2">
+                                <input type="text" name="<?= $atributos['7']['name'] ?>" class="form-control" value="<?= $atributos['7']['text'] ?>">
+                            </div>
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <div class="col-sm-offset-8 col-sm-12">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </fieldset>
 
                     </fieldset>
 

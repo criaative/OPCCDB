@@ -22,51 +22,44 @@ $categoria = $_POST['categoria'];
 $language_id = $_POST['language_id'];
 
 $cor = $_POST['Cor:'];
-$acabamento =  $_POST['Acabamento:'];
-$tamanho =  $_POST['Tamanho:'];
-$impressão =  $_POST['Impressão:'];
-$quantidade =  $_POST['Quantidade:'];
-$tamanhoSangra =  $_POST['Tamanho_com_Sangra:'];
-$acabamentoIncluso =  $_POST['Acabamento_Incluso:'];
-$prazoEntrega =  $_POST['Prazo_de_entrega:'];
-$codigo =  $_POST['Codigo:'];
-$peso =  $_POST['Peso:_'];
+$acabamento = $_POST['Acabamento:'];
+$tamanho = $_POST['Tamanho:'];
+$impressao = $_POST['Impressão:'];
+$tamanhoSangra = $_POST['Tamanho_com_Sangra:'];
+$acabamentoIncluso = $_POST['Acabamento_Incluso:'];
+$prazoEntrega = $_POST['Prazo_de_entrega:'];
 
-echo'<pre><hr>';
-print_r($_POST);
-echo'<hr></pre>';
-exit;
 $sql = "INSERT INTO loja.oc_product(
-        product_id,
-        model,
-        sku,
-        quantity,
-        price,
-        weight,
-        weight_class_id,
-        length,
-        width,
-        height,
-        length_class_id,
-        status,
-        materia,
-        preco_loja
-    ) VALUES (
-        NULL,
-        :model,
-        :sku,
-        :quantity,
-        :price,
-        :weight,
-        :weight_class_id,
-        :length,
-        :width,
-        :height,
-        :length_class_id,
-        :status,
-        :materia,
-        :preco_loja
-    )";
+  product_id,
+  model,
+  sku,
+  quantity,
+  price,
+  weight,
+  weight_class_id,
+  length,
+  width,
+  height,
+  length_class_id,
+  status,
+  materia,
+  preco_loja
+  ) VALUES (
+  NULL,
+  :model,
+  :sku,
+  :quantity,
+  :price,
+  :weight,
+  :weight_class_id,
+  :length,
+  :width,
+  :height,
+  :length_class_id,
+  :status,
+  :materia,
+  :preco_loja
+  )";
 
 $all_dados[':model'] = $model;
 $all_dados[':sku'] = $sku;
@@ -90,11 +83,11 @@ $id_pro = $con->lastInsertId();
 
 
 $sql1 = "INSERT INTO loja.oc_product_description(
-        product_id,
-        name,
-        language_id,
-        description
-        ) VALUES (:id_pro, :produto, :language_id, :descricao)";
+  product_id,
+  name,
+  language_id,
+  description
+  ) VALUES (:id_pro, :produto, :language_id, :descricao)";
 
 
 $all_dados1[':id_pro'] = $id_pro;
@@ -107,17 +100,7 @@ $exec1->execute($all_dados1);
 
 
 $sql2 = "INSERT INTO loja.oc_product_to_category(
-        product_id, category_id) VALUES (:id_pro, :categoria)";
-
-
-$all_dados2[':categoria'] = $categoria;
-$all_dados2[':id_pro'] = $id_pro;
-
-$exec2 = $con->prepare($sql2);
-$exec2->execute($all_dados2);
-
-$sql2 = "INSERT INTO loja.oc_product_to_category(
-        product_id, category_id) VALUES (:id_pro, :categoria)";
+  product_id, category_id) VALUES (:id_pro, :categoria)";
 
 
 $all_dados2[':categoria'] = $categoria;
@@ -127,5 +110,33 @@ $exec2 = $con->prepare($sql2);
 $exec2->execute($all_dados2);
 
 
+$sqlAttribute = "
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 4, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 5, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 6, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 7, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 8, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 9, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 10, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 11, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 12, 2, :peso);
+    INSERT INTO loja.oc_product_attribute(product_id, attribute_id, language_id, text) VALUES (:id_pro, 13, 2, :peso);
+    ";
+
+
+$attibute[':id_pro'] = $id_pro;
+$attibute[':cor'] = $cor;
+$attibute[':acabamento'] = $acabamento;
+$attibute[':tamanho'] = $tamanho;
+$attibute[':impressao'] = $impressao;
+$attibute[':quantidade'] = $quantity;
+$attibute[':tamanhoSangra'] = $tamanhoSangra;
+$attibute[':acabamentoIncluso'] = $acabamentoIncluso;
+$attibute[':prazoEntrega'] = $prazoEntrega;
+$attibute[':codigo'] = $sku;
+$attibute[':peso'] = $weight;
+
+$att = $con->prepare($sqlAttribute);
+$att->execute($attibute);
 
 header("location: ../index.php");

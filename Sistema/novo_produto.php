@@ -11,18 +11,7 @@ $exec->execute();
 $categorias = $exec->fetchAll(PDO::FETCH_ASSOC);
 
 
-$sql2 = 'SELECT 
-    att.attribute_id, attd.name
-FROM
-    oc_attribute att
-    left join oc_attribute_description attd on attd.attribute_id = att.attribute_id ';
-
-$exec2 = $con->pdo()->prepare($sql2);
-$exec2->execute();
-
-$atributos = $exec2->fetchAll(PDO::FETCH_ASSOC);
-
-$sql3 = 'SELECT 
+$attId = 'SELECT 
     att.attribute_id,
     attg.attribute_group_id,
     attgd.name,
@@ -39,11 +28,9 @@ FROM
         
      ';
 
-$exec3 = $con->pdo()->prepare($sql3);
-$exec3->execute();
-
-$dados3 = $exec3->fetchAll(PDO::FETCH_ASSOC);
-
+$att_id = $con->pdo()->prepare($attId);
+$att_id->execute();
+$atributos = $att_id->fetchAll(PDO::FETCH_ASSOC);
 
 include 'header/header.php';
 ?>
@@ -135,46 +122,35 @@ include 'header/header.php';
             </fieldset>
             <br>
             <fieldset>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['0']['name'] ?>" class="form-control" placeholder="<?= $dados3['0']['name'] ?>">
+                <div class="col-xs-1">
+                    <input type="text" name="<?= $atributos['0']['name'] ?>" class="form-control" placeholder="<?= $atributos['0']['name'] ?>">
                 </div>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['1']['name'] ?>" class="form-control" placeholder="<?= $dados3['1']['name'] ?>">
+                <div class="col-xs-3">
+                    <input type="text" name="<?= $atributos['1']['name'] ?>" class="form-control" placeholder="<?= $atributos['1']['name'] ?>">
                 </div>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['2']['name'] ?>" class="form-control" placeholder="<?= $dados3['2']['name'] ?>">
+                <div class="col-xs-3">
+                    <input type="text" name="<?= $atributos['2']['name'] ?>" class="form-control" placeholder="<?= $atributos['2']['name'] ?>">
                 </div>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['3']['name'] ?>" class="form-control" placeholder="<?= $dados3['3']['name'] ?>">
-                </div>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['4']['name'] ?>" class="form-control" placeholder="<?= $dados3['4']['name'] ?>">
+                <div class="col-xs-3">
+                    <input type="text" name="<?= $atributos['3']['name'] ?>" class="form-control" placeholder="<?= $atributos['3']['name'] ?>">
                 </div>
             </fieldset>
             <br>
             <fieldset>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['5']['name'] ?>" class="form-control" placeholder="<?= $dados3['5']['name'] ?>">
+                <div class="col-xs-3">
+                    <input type="text" name="<?= $atributos['5']['name'] ?>" class="form-control" placeholder="<?= $atributos['5']['name'] ?>">
                 </div>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['6']['name'] ?>" class="form-control" placeholder="<?= $dados3['6']['name'] ?>">
+                <div class="col-xs-4">
+                    <input type="text" name="<?= $atributos['6']['name'] ?>" class="form-control" placeholder="<?= $atributos['6']['name'] ?>">
                 </div>
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['7']['name'] ?>" class="form-control" placeholder="<?= $dados3['7']['name'] ?>">
-                </div>
-            
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['8']['name'] ?>" class="form-control" placeholder="<?= $dados3['8']['name'] ?>">
-                </div>
-            
-                <div class="col-xs-2">
-                    <input type="text" name="<?= $dados3['9']['name'] ?>" class="form-control" placeholder="<?= $dados3['9']['name'] ?>">
+                <div class="col-xs-3">
+                    <input type="text" name="<?= $atributos['7']['name'] ?>" class="form-control" placeholder="<?= $atributos['7']['name'] ?>">
                 </div>
             </fieldset>
 
             <br>
             <fieldset>
-                <div class="col-sm-offset-8 col-sm-10">
+                <div class="col-sm-offset-9 col-sm-12">
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
             </fieldset>

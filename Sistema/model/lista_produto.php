@@ -1,13 +1,17 @@
 <?php
+
 include_once './conexao/conexao.php';
 
 $con = new conexao();
 
-$sql = 'SELECT  *,pro.id FROM
+$sql = 'SELECT 
+    *, pro.id
+FROM
     produtos pro
         LEFT JOIN
-    categorias cat ON pro.id = cat.id group by pro.id
-    limit 0,10';
+    categorias cat ON pro.id = cat.id
+GROUP BY pro.id
+LIMIT 0,10';
 
 $exec = $con->pdo()->prepare($sql);
 $exec->execute();

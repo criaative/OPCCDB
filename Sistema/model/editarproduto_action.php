@@ -20,9 +20,15 @@ $status = $_POST['status'];
 $preco_loja = $_POST['precoLoja'];
 $categoria = $_POST['categoria'];
 
-echo'<pre><hr>';
-print_r($_POST);
-echo'<hr></pre>';
+$cor = $_POST['Cor:'];
+$acabamento = $_POST['Acabamento:'];
+$tamanho = $_POST['Tamanho:'];
+$impressao = $_POST['Impressão:'];
+$tamanhoSangra = $_POST['Tamanho_com_Sangra:'];
+$acabamentoIncluso = $_POST['Acabamento_Incluso:'];
+$prazoEntrega = $_POST['Prazo_de_entrega:'];
+
+
 
 //exit;
 $sql = "update oc_product
@@ -88,5 +94,34 @@ $all_dados3[':id'] = $id;
 
 $exec3 = $con->pdo()->prepare($sql3);
 $exec3->execute($all_dados3);
+
+$sqlAttribute = "
+    UPDATE loja.oc_product_attribute SET text = :cor where product_id = :id_pro AND attribute_id = 4;
+    UPDATE loja.oc_product_attribute SET text = :acabamento where product_id = :id_pro AND attribute_id = 5;
+    UPDATE loja.oc_product_attribute SET text = :tamanho where product_id = :id_pro AND attribute_id = 6;
+    UPDATE loja.oc_product_attribute SET text = :impressao where product_id = :id_pro AND attribute_id = 7;
+    UPDATE loja.oc_product_attribute SET text = :quantidade where product_id = :id_pro AND attribute_id = 8;
+    UPDATE loja.oc_product_attribute SET text = :tamanhoSangra where product_id = :id_pro AND attribute_id = 9;
+    UPDATE loja.oc_product_attribute SET text = :acabamentoIncluso where product_id = :id_pro AND attribute_id = 10;
+    UPDATE loja.oc_product_attribute SET text = :prazoEntrega where product_id = :id_pro AND attribute_id = 11;
+    UPDATE loja.oc_product_attribute SET text = :codigo where product_id = :id_pro AND attribute_id = 12;
+    UPDATE loja.oc_product_attribute SET text = :peso where product_id = :id_pro AND attribute_id = 13;
+    ";
+
+
+$attibute[':id_pro'] = $id;
+$attibute[':cor'] = $cor;
+$attibute[':acabamento'] = $acabamento;
+$attibute[':tamanho'] = $tamanho;
+$attibute[':impressao'] = $impressao;
+$attibute[':quantidade'] = $quantity;
+$attibute[':tamanhoSangra'] = $tamanhoSangra;
+$attibute[':acabamentoIncluso'] = $acabamentoIncluso;
+$attibute[':prazoEntrega'] = $prazoEntrega;
+$attibute[':codigo'] = $sku;
+$attibute[':peso'] = $weight;
+
+$att = $con->pdo()->prepare($sqlAttribute);
+$att->execute($attibute);
 
 header("location: ../index.php");
