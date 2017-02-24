@@ -20,13 +20,10 @@ include 'header/header.php';
                 <div class="col-xs-3">
                     <input type="text" name="categoria" value="" placeholder="categoria" class="form-control">
                 </div>
-                <div class="col-xs-3">
+                <div class="col-xs-2">
                     <input type="text" name="status" value="" placeholder="status" class="form-control">
                 </div>
-            </fieldset>
-            <br>
-            <fieldset>
-                <div class="col-sm-offset-10 col-sm-12">
+                <div class="col-xs-1">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalPesquisa">
                         Pesquisar
