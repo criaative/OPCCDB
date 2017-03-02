@@ -58,13 +58,13 @@ $html = "
 
             <div id='titulo'><div class='prod'><strong>$modelo</strong></div><br>
                 <div class='tlo'>$desc</div>
-            </div>	 
+            </div>   
             <div id='logo'><img src='image/logoAp.png' width='240px'/></div>
 
             <div class='clearfix'></div>
 
             <div id='descricao'><p>$descricao</p>
-            </div>	 
+            </div>   
 
 
             <div id='composicao'>Composição <br>
@@ -123,7 +123,7 @@ $html = "
                 $peso <br>      
             </div>
 
-            	 
+                 
 
 
 

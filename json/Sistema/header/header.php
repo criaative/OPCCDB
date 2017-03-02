@@ -25,6 +25,7 @@
         <script src="../Sistema/js/showprodutos.js" type="text/javascript"></script>
         <script src="../Sistema/js/show_slide_product.js" type="text/javascript"></script>
         <script src="../Sistema/js/produtos.js" type="text/javascript"></script>
+        <script src="../Sistema/js/pesquisa.js" type="text/javascript"></script>
 
     </head>
 

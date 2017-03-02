@@ -10,10 +10,7 @@ function carregaRegistros()
 
         $('#lista-produtos tbody').empty();
 
-
-
         retorno.forEach(function (obj, idx) {
-
 
             var tr = '<tr obj-id="' + obj.id + '">'
                     + '<td>' + obj.status + '</td>'
@@ -35,20 +32,5 @@ function carregaRegistros()
         });
 
     });
-    
-    function ordCrescente() 
-  {
-    listaCidades.sort();
-    imprimeVetor();
-    
-  }
-
- function ordDecrescente() 
-  {
-    listaCidades.sort().reverse();
-    imprimeVetor();
-    
-  }
-
 
 }
