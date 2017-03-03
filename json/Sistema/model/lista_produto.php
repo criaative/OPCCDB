@@ -11,8 +11,7 @@ FROM
     produtos pro
         LEFT JOIN
     categorias cat ON pro.id = cat.id
-GROUP BY pro.id
-LIMIT 0,10';
+GROUP BY pro.id';
 
 $exec = $con->pdo()->prepare($sql);
 $exec->execute();

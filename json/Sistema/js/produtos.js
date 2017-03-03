@@ -14,9 +14,9 @@ function carregaRegistros()
 
             var tr = '<tr obj-id="' + obj.id + '">'
                     + '<td>' + obj.status + '</td>'
-                    + '<td><img src="http://localhost/CasaDosBanners/image/' + obj.image + '" width="90%"></td>'
+                    + '<td><a href="etiqueta.php?id=' + obj.id + '"><img src="http://localhost/CasaDosBanners/image/' + obj.image + '" width="90%"></a></td>'
                     + '<td>' + obj.sku + '</td>'
-                    + '<td>' + obj.produto + '</td>'
+                    + '<td><a href="show_produto.php?id=' + obj.id + '">' + obj.produto + '</a></td>'
                     + '<td>' + obj.model + '</td>'
                     + '<td>' + obj.categoria + '</td>'
                     + '<td>' + obj.materia + '</td>'
