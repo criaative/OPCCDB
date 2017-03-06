@@ -89,21 +89,26 @@ include 'header/header.php';
                     <fieldset>
                         <div class="col-xs-2">
                             <input type="hidden" name="id" value="<?= $id ?>" class="form-control">
+                            <label>Codigo</label>
                             <input type="text" name="cod" value="<?= $dados['0']['sku'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-3">
+                            <label>Produto</label>
                             <input type="text" name="produto" value="<?= $dados['0']['produto'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-3">
+                            <label>Modelo</label>
                             <input type="text" name="modelo" value="<?= $dados['0']['model'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-2">
+                            <label>estoque</label>
                             <input type="text" name="estoque" value="<?= $dados['0']['estoque'] ?>" class="form-control">
                         </div>
                     </fieldset>
                     <br>
                     <fieldset>
                         <div class="col-xs-2">
+                            <label>Categoria</label>
                             <select name="categoria" class="form-control">
                                 <option value="0">-------</option>
                                 <?php foreach ($dados2 as $v) { ?>
@@ -113,34 +118,42 @@ include 'header/header.php';
                             </select> 
                         </div>
                         <div class="col-xs-2">
+                            <label>Custo</label>
                             <input type="text" name="precoCusto" value="<?= $dados['0']['materia'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-3">
+                            <label>Preço Site</label>
                             <input type="text" name="precoSite" value="<?= $dados['0']['preco_site'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-3">
+                            <label>Preço Loja</label>
                             <input type="text" name="precoLoja" value="<?= $dados['0']['preco_loja'] ?>" class="form-control">
                         </div>
                     </fieldset>
                     <br>
                     <fieldset>
                         <div class="col-xs-2">
+                            <label>Peso</label>
                             <input type="text" name="peso" value="<?= $dados['0']['peso'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-2">
+                            <label>altura</label>
                             <input type="text" name="altura" value="<?= $dados['0']['altura'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-2">
+                            <label>Largura</label>
                             <input type="text" name="largura" value="<?= $dados['0']['largura'] ?>" class="form-control">
                         </div>
                         <div class="col-xs-2">
+                            <label>Comprimento</label>
                             <input type="text" name="comprimento" value="<?= $dados['0']['comprimento'] ?>" class="form-control">
                         </div>
                     </fieldset>
                     <fieldset>
                         <br>
                         <div class="col-xs-10">
-                            <textarea type="text" name="descricao" class="form-control"><?= $dados['0']['descricao'] ?></textarea>
+                            <label>Descrição</label>
+                            <textarea style="height:100px;" type="text" name="descricao" class="form-control"><?= $dados['0']['descricao'] ?></textarea>
                         </div>
                     </fieldset>
                     <fieldset>
@@ -158,29 +171,29 @@ include 'header/header.php';
                         <br>
                         <fieldset>
                             <div class="col-xs-3">
-                                <input type="text" name="<?= $atributos['0']['name'] ?>" class="form-control" value="<?= $atributos['0']['text'] ?>">
+                                <input type="text" name="<?= $atributos['0']['name'] ?>" placeholder="<?= $atributos['0']['name'] ?>" class="form-control" value="<?= $atributos['0']['text'] ?>">
                             </div>
                             <div class="col-xs-4">
-                                <input type="text" name="<?= $atributos['1']['name'] ?>" class="form-control" value="<?= $atributos['1']['text'] ?>">
+                                <input type="text" name="<?= $atributos['1']['name'] ?>" placeholder="<?= $atributos['1']['name'] ?>" class="form-control" value="<?= $atributos['1']['text'] ?>">
                             </div>
                             <div class="col-xs-3">
-                                <input type="text" name="<?= $atributos['2']['name'] ?>" class="form-control" value="<?= $atributos['2']['text'] ?>">
+                                <input type="text" name="<?= $atributos['2']['name'] ?>" placeholder="<?= $atributos['2']['name'] ?>" class="form-control" value="<?= $atributos['2']['text'] ?>">
                             </div>
                             
                         </fieldset>
                         <br>
                         <fieldset>
                             <div class="col-xs-2">
-                                <input type="text" name="<?= $atributos['3']['name'] ?>" class="form-control" value="<?= $atributos['3']['text'] ?>">
+                                <input type="text" name="<?= $atributos['3']['name'] ?>" placeholder="<?= $atributos['3']['name'] ?>" class="form-control" value="<?= $atributos['3']['text'] ?>">
                             </div>
                             <div class="col-xs-3">
-                                <input type="text" name="<?= $atributos['5']['name'] ?>" class="form-control" value="<?= $atributos['5']['text'] ?>">
+                                <input type="text" name="<?= $atributos['5']['name'] ?>" placeholder="<?= $atributos['5']['name'] ?>" class="form-control" value="<?= $atributos['5']['text'] ?>">
                             </div>
                             <div class="col-xs-3">
-                                <input type="text" name="<?= $atributos['6']['name'] ?>" class="form-control" value="<?= $atributos['6']['text'] ?>">
+                                <input type="text" name="<?= $atributos['6']['name'] ?>" placeholder="<?= $atributos['6']['name'] ?>"  class="form-control" value="<?= $atributos['6']['text'] ?>">
                             </div>
                             <div class="col-xs-2">
-                                <input type="text" name="<?= $atributos['7']['name'] ?>" class="form-control" value="<?= $atributos['7']['text'] ?>">
+                                <input type="text" name="<?= $atributos['7']['name'] ?>" placeholder="<?= $atributos['7']['name'] ?>" class="form-control" value="<?= $atributos['7']['text'] ?>">
                             </div>
                         </fieldset>
                         <br>

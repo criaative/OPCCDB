@@ -112,7 +112,10 @@ include 'header/header.php';
 
         <div class="col-xs-7" style="background-color: #f7f7f7; border:0px solid gray">
             <!-- Datos del vendedor y titulo del producto -->
-            <h3><?= $dados['0']['produto'] ?></h3>   <a class="btn btn-primary" href="etiqueta.php?id=<?= $dados['0']['id'] ?>">Etiqueta</a> 
+            <a class="btn btn-primary" href="editarproduto.php?id=<?= $dados['0']['id'] ?>">Editar</a> 
+            <a class="btn btn-primary" href="etiqueta.php?id=<?= $dados['0']['id'] ?>">Etiqueta</a>
+            <h3><?= $dados['0']['produto'] ?></h3>   
+             
             <h4 style="color:#337ab7">Medidas <a href="#"><?= $dados['0']['model'] ?></a> · <small style="color:#337ab7">Qtd: <?= $dados['0']['estoque'] ?> </small></h4>
 
             <!-- Precios -->

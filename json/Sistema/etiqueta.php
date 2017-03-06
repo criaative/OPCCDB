@@ -93,7 +93,7 @@ foreach ($atributos As $k => $v) {
     $atribut = $v['name'];
     $atributcont = $v['text'];
   $html .= "$atribut ";
-  $html .= "$atributcont<br>";
+  $html .= "<span class='span'><strong>$atributcont</strong></span><br>";
 };
 
 $html .= "</div>
