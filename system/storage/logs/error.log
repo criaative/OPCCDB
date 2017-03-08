@@ -3585,3 +3585,93 @@
 2017-03-08 15:24:24 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
 2017-03-08 15:24:35 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
 2017-03-08 15:24:51 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:11:29 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:12:16 - Módulo Correios :: produto com dimensões e peso inválidos (Kit Cavalete). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:12:16 - Módulo Correios :: produto com dimensões e peso inválidos (Kit Cavalete). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:12:16 - Módulo Correios :: produto com dimensões e peso inválidos (Kit Cavalete). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:12:16 - Módulo Correios :: produto com dimensões e peso inválidos (Kit Cavalete). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:12:16 - Módulo Correios :: produto com dimensões e peso inválidos (Kit Cavalete). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:12:16 - Módulo Correios :: produto com dimensões e peso inválidos (Kit Cavalete). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:13:06 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido.  in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 18:13:06 - PHP Warning:  fsockopen(): unable to connect to //ssl:  //smtp.gmail.com:465 (php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. ) in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 18:13:33 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:13:42 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:15:17 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:15:17 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:15:17 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:15:17 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:15:17 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:15:17 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:15:30 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido.  in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 18:15:30 - PHP Warning:  fsockopen(): unable to connect to //ssl:  //smtp.gmail.com:465 (php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. ) in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 18:15:35 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:15:51 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:16:04 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:16:17 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:16:20 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:16:36 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:16:39 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:17:10 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:17:13 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:18:56 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:18:56 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:18:56 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:18:56 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:18:56 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:18:56 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 18:19:14 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido.  in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 18:19:14 - PHP Warning:  fsockopen(): unable to connect to //ssl:  //smtp.gmail.com:465 (php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. ) in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 18:19:42 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:20:46 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:20:50 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:24:49 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 18:24:52 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:17:33 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:17:35 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:17:50 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:18:36 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:18:42 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:18:47 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:19:21 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:19:49 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:19:49 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:19:49 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:19:49 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:19:49 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:19:49 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:20:15 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido.  in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 19:20:15 - PHP Warning:  fsockopen(): unable to connect to //ssl:  //smtp.gmail.com:465 (php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. ) in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 19:20:30 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido.  in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 19:20:30 - PHP Warning:  fsockopen(): unable to connect to //ssl:  //smtp.gmail.com:465 (php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. ) in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 19:21:09 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:21:21 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:21:23 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:21:59 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:22:04 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:22:12 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:22:27 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:22:27 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:22:27 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:22:27 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:22:27 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:22:27 - Módulo Correios :: produto com dimensões e peso inválidos (Cavalete de Madeira). Consulte os limites de dimensões e de peso em http://www.correios.com.br/para-voce/precisa-de-ajuda/limites-de-dimensoes-e-de-peso
+2017-03-08 19:22:30 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido.  in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 19:22:30 - PHP Warning:  fsockopen(): unable to connect to //ssl:  //smtp.gmail.com:465 (php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. ) in C:\xampp\htdocs\CasaDosBanners\system\library\mail.php on line 167
+2017-03-08 19:22:34 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:22:38 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:23:41 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:42 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:43 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:43 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:43 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:44 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:44 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:44 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:44 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:45 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:45 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:45 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:45 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:46 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:46 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 19:37:46 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
