@@ -3582,3 +3582,6 @@
 2017-03-08 15:03:37 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
 2017-03-08 15:05:18 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
 2017-03-08 15:05:22 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 15:24:24 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 15:24:35 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
+2017-03-08 15:24:51 - PHP Notice:  Undefined variable: username in C:\xampp\htdocs\CasaDosBanners\admin\view\template\common\column_left.tpl on line 5
