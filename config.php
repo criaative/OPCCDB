@@ -20,7 +20,7 @@ define('DIR_UPLOAD', 'C:/xampp/htdocs/CasaDosBanners/system/storage/upload/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', '179.188.16.205');
+define('DB_HOSTNAME', 'sistemacdb.mysql.dbaas.com.br');
 define('DB_USERNAME', 'sistemacdb');
 define('DB_PASSWORD', 'C@s@123456');
 define('DB_DATABASE', 'sistemacdb');
